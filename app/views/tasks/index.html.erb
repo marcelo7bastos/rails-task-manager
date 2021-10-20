@@ -1,0 +1,10 @@
+<h1> Index Html ERB </h1>
+<h1> My tasks</h1>
+
+<ul>
+  <% @tasks.each do |task| %>
+    <li><%= link_to task.title, task_path(task) %></li>
+  <% end %>
+</ul>
+
+<p><%= link_to 'Create a new Task', new_task_path %></p>
